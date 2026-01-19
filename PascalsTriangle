@@ -1,0 +1,87 @@
+/*
+Titel: "Rechnung"
+Autor: Josef Reinnagel Lueck
+Matrikelnummer: 110449
+Erstellungsort: Potsdam
+Erstellungsdatum: 18.01.2026
+Entwicklungsumgebung: Java Eclipse 4.37.0
+Programmiersprache: Java
+Version: Java 21
+Betriebssystem: Linux Mint
+ */
+
+/* Diese Klasse soll die berechnung des Pascalchen Dreiecks durchführen*/
+
+public class Rechnung {
+
+// Gibt das Dreick aus ----------------------------------------------------------------------------------------------------------------------------
+	private static void gibPascalscheDreieck(long reihenAnzahl)
+	{
+		long zaehlerN = 0;
+		long zaehlerK = 0;
+		boolean abstandsZaehler = true;
+		long ergebnis = 1;
+
+		do 
+		{
+			if (abstandsZaehler)
+			{
+				long ziffernZaehler = String.valueOf(ergebnis).length();
+				verschiebeAbstand(reihenAnzahl, zaehlerN, ziffernZaehler);
+			}
+			if (zaehlerK <= zaehlerN)
+			{
+				ergebnis = berechneNueberK(zaehlerN, zaehlerK);
+				java.lang.System.out.print(ergebnis + " ");
+				zaehlerK++;
+				abstandsZaehler = false;
+			}
+			else
+			{
+				zaehlerN++;
+				zaehlerK = 0;
+				System.out.print("\n");
+				abstandsZaehler = true;
+			}
+		}while (zaehlerN < reihenAnzahl);
+		java.lang.System.out.println("Fertig ist das Dreieck");
+	}
+	
+static void verschiebeAbstand(long abstand, long zeilenzaehler, long ziffernZaehler)
+{
+	
+	long leerzeichen = abstand -zeilenzaehler -(1*ziffernZaehler);
+	long leerzeichenZaehler = 0;
+	while (leerzeichenZaehler < leerzeichen)
+	{
+		java.lang.System.out.print(" ");
+		leerzeichenZaehler++;
+	}
+}
+
+	// Berechnungen fuer die Fakultaet und n ueber k------------------------------------------------------------------------------------------------------------------
+	private static long berechneNueberK(long n, long k)
+	{
+		long ergebnis;
+		ergebnis = berechneFakultaet(n)/(berechneFakultaet(k)*(berechneFakultaet(n-k)));
+		return ergebnis;
+	}
+
+	public static long berechneFakultaet(long ziel)
+	{
+		long zaehler = 1;
+		long zahl = 1;
+		while (zaehler <= ziel)
+		{
+			zahl = zahl * zaehler;
+			zaehler++;
+		}
+		return zahl;
+	}
+
+
+	public static void main(java.lang.String [] args)
+	{
+		gibPascalscheDreieck(7);
+	}
+}
