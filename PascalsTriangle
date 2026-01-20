@@ -1,13 +1,10 @@
 /*
 Titel: "Rechnung"
-Autor: Josef Reinnagel Lueck
-Matrikelnummer: 110449
-Erstellungsort: Potsdam
+Autor: Josef
 Erstellungsdatum: 18.01.2026
 Entwicklungsumgebung: Java Eclipse 4.37.0
 Programmiersprache: Java
 Version: Java 21
-Betriebssystem: Linux Mint
  */
 
 /* Diese Klasse soll die berechnung des Pascalchen Dreiecks durchführen*/
