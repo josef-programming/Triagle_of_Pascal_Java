@@ -1,1 +1,1 @@
-This program displays the triangle of pascal which was written in Java.
+This repository contains a .java file to display the triangle of pascal in the system console.
