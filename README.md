@@ -1,1 +1,1 @@
-In this Repository I upload my Java Programs which I alway wanted to program.
+This program displays the riangle of pascal which was written in Java.
