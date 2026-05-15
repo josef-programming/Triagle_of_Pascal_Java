@@ -18,7 +18,7 @@ These are written in capitalized words.
 For example:
 String to store strings.
 
-There are many more komplex Datatypes.
+There are many more complex Datatypes.
 
 To declare a variable means:
 - insert the Datatype and name the variable
